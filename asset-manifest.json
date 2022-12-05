@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tricky-form/static/css/main.07b80ed8.css",
+    "main.css": "/tricky-form/static/css/main.8487bd1e.css",
     "main.js": "/tricky-form/static/js/main.4ab3b15c.js",
     "index.html": "/tricky-form/index.html",
-    "main.07b80ed8.css.map": "/tricky-form/static/css/main.07b80ed8.css.map",
+    "main.8487bd1e.css.map": "/tricky-form/static/css/main.8487bd1e.css.map",
     "main.4ab3b15c.js.map": "/tricky-form/static/js/main.4ab3b15c.js.map"
   },
   "entrypoints": [
-    "static/css/main.07b80ed8.css",
+    "static/css/main.8487bd1e.css",
     "static/js/main.4ab3b15c.js"
   ]
 }
