@@ -4,6 +4,7 @@ const RadioButtonGroup = (props) => {
   // When radio is clicked
   const handleRadioClick = (event) => {
     props.setRadio(event.target.value);
+    console.log(event.target.value);
   };
   return (
     <fieldset>
@@ -18,10 +19,10 @@ const RadioButtonGroup = (props) => {
         Merkitse enimmäismäärä osakkeita
         <br />
       </label>
-      <p>
+      {(!props.toggle || props.toggle && props.radio === "all") && (<p>
         Enimmäismäärä on {props.maxStock} kpl. <br />
         Merkinnän jälkeen sinulla jää käyttämättä 0 merkintäoikeutta.
-      </p>
+      </p>)}
 
       <label>
         <input
@@ -33,7 +34,7 @@ const RadioButtonGroup = (props) => {
         Syötä merkittävien osakkeiden määrä
         <br />
       </label>
-      <Input
+      {(!props.toggle || props.toggle && props.radio === "custom") &&  (<><Input
         disabled={props.radio === "all" ? true : false}
         maxStock={props.maxStock}
         setInput={props.setInput}
@@ -44,7 +45,7 @@ const RadioButtonGroup = (props) => {
         Merkinnän jälkeen sinulla jää käyttämättä{" "}
         {(6 / 5) * (props.maxStock - props.input) + " "}
         merkintäoikeutta.
-      </p>
+      </p></>)}
     </fieldset>
   );
 };

@@ -28,7 +28,7 @@ const Input = (props) => {
       <span className={props.disabled ? "unit strike-through" : "unit"}>
         KPL
       </span>
-      {alert && props.radio !== "all" && (
+      {alert && props.radio !== "all" && !props.toggle && (
         <p>
           <span className="material-symbols-sharp">warning</span>
           {alert}
