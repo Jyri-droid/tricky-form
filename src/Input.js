@@ -10,7 +10,7 @@ const Input = (props) => {
       setAlert("Vähimmäismäärä on 1");
       props.setInput(0);
     } else if (Math.round(event.target.value / 5) !== event.target.value / 5) {
-      setAlert("Syötä määrä joka on jaollinen luvulla 5");
+      setAlert("Määrän pitää olla jaollinen luvulla 5");
       props.setInput(0);
     } else {
       setAlert(false);
