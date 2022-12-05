@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/tricky-form/static/css/main.073c9b0a.css",
-    "main.js": "/tricky-form/static/js/main.3d135aa2.js",
-    "static/js/787.a46ab783.chunk.js": "/tricky-form/static/js/787.a46ab783.chunk.js",
-    "static/media/logo.svg": "/tricky-form/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/tricky-form/static/css/main.ea8e6b46.css",
+    "main.js": "/tricky-form/static/js/main.e0d92ea5.js",
     "index.html": "/tricky-form/index.html",
-    "main.073c9b0a.css.map": "/tricky-form/static/css/main.073c9b0a.css.map",
-    "main.3d135aa2.js.map": "/tricky-form/static/js/main.3d135aa2.js.map",
-    "787.a46ab783.chunk.js.map": "/tricky-form/static/js/787.a46ab783.chunk.js.map"
+    "main.ea8e6b46.css.map": "/tricky-form/static/css/main.ea8e6b46.css.map",
+    "main.e0d92ea5.js.map": "/tricky-form/static/js/main.e0d92ea5.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.3d135aa2.js"
+    "static/css/main.ea8e6b46.css",
+    "static/js/main.e0d92ea5.js"
   ]
 }
