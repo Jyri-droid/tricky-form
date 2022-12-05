@@ -8,6 +8,7 @@ import { useState } from "react";
 export default function App() {
   const [maxStock, setMaxStock] = useState(100);
   const [price, setPrice] = useState(50);
+  const [ratio, setRatio] = useState([6,5]);
   const [radio, setRadio] = useState("all");
   const [input, setInput] = useState(null);
   const [toggle, setToggle] = useState(false);
@@ -21,6 +22,7 @@ export default function App() {
             radio={radio}
             setRadio={setRadio}
             maxStock={maxStock}
+            ratio={ratio}
             input={input}
             setInput={setInput}
             toggle={toggle}

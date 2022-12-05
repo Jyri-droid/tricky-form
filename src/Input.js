@@ -9,8 +9,8 @@ const Input = (props) => {
     } else if (event.target.value <= 0) {
       setAlert("Vähimmäismäärä on 1");
       props.setInput(0);
-    } else if (Math.round(event.target.value / 5) !== event.target.value / 5) {
-      setAlert("Määrän pitää olla jaollinen luvulla 5");
+    } else if (Math.round(event.target.value / props.ratio) !== event.target.value / 5) {
+      setAlert(`Määrän pitää olla jaollinen luvulla ${props.ratio}`);
       props.setInput(0);
     } else {
       setAlert(false);

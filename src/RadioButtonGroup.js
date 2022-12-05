@@ -37,13 +37,14 @@ const RadioButtonGroup = (props) => {
       {(!props.toggle || props.toggle && props.radio === "custom") &&  (<><Input
         disabled={props.radio === "all" ? true : false}
         maxStock={props.maxStock}
+        ratio={props.ratio[1]}
         setInput={props.setInput}
         radio={props.radio}
       />
       <p>
-        Syötä määrä, joka on jaollinen luvulla 5. <br />
+        Syötä määrä, joka on jaollinen luvulla {props.ratio[1]}. <br />
         Merkinnän jälkeen sinulla jää käyttämättä{" "}
-        {(6 / 5) * (props.maxStock - props.input) + " "}
+        {(props.ratio[0] / props.ratio[1]) * (props.maxStock - props.input) + " "}
         merkintäoikeutta.
       </p></>)}
     </fieldset>
