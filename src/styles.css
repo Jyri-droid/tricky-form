@@ -139,11 +139,16 @@ h4 {
 
 .toggle {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.toggle label {
+  color:rgb(120, 120, 120);
+  font-size: 1rem;
 }
 
 input[type="checkbox"] {
-  height: 1rem;
-  width: 1rem;
+  height: 0.75rem;
+  width: 0.75rem;
   margin-right: 0.5rem;
 }
