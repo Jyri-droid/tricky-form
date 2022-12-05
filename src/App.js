@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import RadioButtonGroup from "./RadioButtonGroup";
+import ListItem from "./ListItem";
+import "./styles.css";
+import React from "react";
+import { useState } from "react";
 
-function App() {
+export default function App() {
+  const [maxStock, setMaxStock] = useState(100);
+  const [price, setPrice] = useState(50);
+  const [radio, setRadio] = useState("all");
+  const [input, setInput] = useState(null);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h2>Osallistu antiin</h2>
+        <form>
+          <RadioButtonGroup
+            radio={radio}
+            setRadio={setRadio}
+            maxStock={maxStock}
+            input={input}
+            setInput={setInput}
+          />
+          <ul>
+            <ListItem value={price}>Osakkeen hinta / kpl</ListItem>
+            <ListItem
+              highlight
+              value={radio === "all" ? maxStock * price : input * price}
+            >
+              Merkintähinta yhteensä
+            </ListItem>
+          </ul>
+        </form>
+      </div>
     </div>
   );
 }
-
-export default App;
