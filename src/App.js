@@ -11,7 +11,8 @@ export default function App() {
   const [ratio, setRatio] = useState([6,5]);
   const [radio, setRadio] = useState("all");
   const [input, setInput] = useState(null);
-  const [toggle, setToggle] = useState(false);
+  const [hideInactive, setHideInactive] = useState(false);
+  const [showBorder, setShowBorder] = useState(false);
 
   return (
     <div className="App">
@@ -25,7 +26,8 @@ export default function App() {
             ratio={ratio}
             input={input}
             setInput={setInput}
-            toggle={toggle}
+            hideInactive={hideInactive}
+            showBorder={showBorder} 
           />
           <ul>
             <ListItem value={price}>Osakkeen hinta / kpl</ListItem>
@@ -37,7 +39,18 @@ export default function App() {
             </ListItem>
           </ul>
         </form>
-        <Toggle toggle={toggle} setToggle={setToggle} />
+        <Toggle 
+          id="hideInactive" 
+          state={hideInactive} 
+          setState={setHideInactive} 
+          text="Piilota epäaktiivisten radio-painikkeiden sisältö" 
+        />
+        <Toggle 
+          id="showTile" 
+          state={showBorder} 
+          setState={setShowBorder} 
+          text="Näytä radio-painikkeiden ääriviiva" 
+        />
       </div>
     </div>
   );

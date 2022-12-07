@@ -1,10 +1,10 @@
 const Toggle = (props) => {
     const handleToggleChange = () => {
-        props.toggle ? props.setToggle(false) : props.setToggle(true);
+        props.state ? props.setState(false) : props.setState(true);
     };
     return <div className="toggle">
-    <input type="checkbox" id="hideInactive" name="hideInactive"  onClick={handleToggleChange} />
-    <label htmlFor="hideInactive">Piilota epäaktiivisten radio-painikkeiden sisältö</label>
+    <input type="checkbox" id={props.id} onClick={handleToggleChange} />
+    <label htmlFor={props.id}>{props.text}</label>
   </div>
 }
 
