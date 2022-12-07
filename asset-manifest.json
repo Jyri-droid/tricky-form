@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tricky-form/static/css/main.8487bd1e.css",
-    "main.js": "/tricky-form/static/js/main.89131a61.js",
+    "main.css": "/tricky-form/static/css/main.ae87e4b2.css",
+    "main.js": "/tricky-form/static/js/main.dab3c0cd.js",
     "index.html": "/tricky-form/index.html",
-    "main.8487bd1e.css.map": "/tricky-form/static/css/main.8487bd1e.css.map",
-    "main.89131a61.js.map": "/tricky-form/static/js/main.89131a61.js.map"
+    "main.ae87e4b2.css.map": "/tricky-form/static/css/main.ae87e4b2.css.map",
+    "main.dab3c0cd.js.map": "/tricky-form/static/js/main.dab3c0cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.8487bd1e.css",
-    "static/js/main.89131a61.js"
+    "static/css/main.ae87e4b2.css",
+    "static/js/main.dab3c0cd.js"
   ]
 }
