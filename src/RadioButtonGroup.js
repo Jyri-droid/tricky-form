@@ -9,7 +9,12 @@ const RadioButtonGroup = (props) => {
 
   return (
     <fieldset>
-      <div className={props.showBorder ? "border" : ""}>
+      <div 
+        className={props.showBorder 
+        ? ((props.hideInactiveBorder && props.radio === "custom") 
+        ? "border transparent" : "border" ) 
+        : ""}
+      >
         <label>
           <input
             type="radio"
@@ -27,7 +32,12 @@ const RadioButtonGroup = (props) => {
         </p>)}
       </div>
 
-      <div className={props.showBorder ? "border" : ""}>
+      <div 
+        className={props.showBorder 
+        ? ((props.hideInactiveBorder && props.radio === "all") 
+        ? "border transparent" : "border" ) 
+        : ""}
+      >
         <label>
           <input
             type="radio"

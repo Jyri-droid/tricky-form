@@ -161,3 +161,11 @@ input[type="checkbox"] {
   width: 0.75rem;
   margin-right: 0.5rem;
 }
+
+.toggle input[type="checkbox"]:disabled ~ label {
+  text-decoration: line-through;
+}
+
+.transparent {
+  border-color: transparent;
+}

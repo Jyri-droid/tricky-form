@@ -13,6 +13,7 @@ export default function App() {
   const [input, setInput] = useState(null);
   const [hideInactive, setHideInactive] = useState(false);
   const [showBorder, setShowBorder] = useState(false);
+  const [hideInactiveBorder, setHideInactiveBorder] = useState(false);
 
   return (
     <div className="App">
@@ -28,6 +29,7 @@ export default function App() {
             setInput={setInput}
             hideInactive={hideInactive}
             showBorder={showBorder} 
+            hideInactiveBorder={hideInactiveBorder}
           />
           <ul>
             <ListItem value={price}>Osakkeen hinta / kpl</ListItem>
@@ -43,13 +45,20 @@ export default function App() {
           id="hideInactive" 
           state={hideInactive} 
           setState={setHideInactive} 
-          text="Piilota epäaktiivisten radio-painikkeiden sisältö" 
+          text="Piilota sisältö epäaktiivisista radio-painikkeista" 
         />
         <Toggle 
           id="showTile" 
           state={showBorder} 
           setState={setShowBorder} 
-          text="Näytä radio-painikkeiden ääriviiva" 
+          text="Näytä ääriviiva radio-painikkeiden ympärillä" 
+        />
+        <Toggle 
+          id="showActiveBorder" 
+          state={hideInactiveBorder} 
+          setState={setHideInactiveBorder} 
+          text="Piilota ääriviiva epäaktiivisista radio-painikkeista"
+          disabled={!showBorder && true}
         />
       </div>
     </div>
