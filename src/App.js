@@ -18,7 +18,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h2>Participate in subscription right</h2>
+        <h2>Participate in the first subscription right</h2>
         <form>
           <RadioButtonGroup
             radio={radio}
