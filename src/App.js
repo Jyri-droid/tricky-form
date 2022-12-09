@@ -18,7 +18,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h2>Osallistu antiin</h2>
+        <h2>Participate in subscription right</h2>
         <form>
           <RadioButtonGroup
             radio={radio}
@@ -32,12 +32,12 @@ export default function App() {
             hideInactiveBorder={hideInactiveBorder}
           />
           <ul>
-            <ListItem value={price}>Osakkeen hinta / kpl</ListItem>
+            <ListItem value={price}>Price per stock</ListItem>
             <ListItem
               highlight
               value={radio === "all" ? maxStock * price : input * price}
             >
-              Merkintähinta yhteensä
+              Total charge
             </ListItem>
           </ul>
         </form>
@@ -45,19 +45,19 @@ export default function App() {
           id="hideInactive" 
           state={hideInactive} 
           setState={setHideInactive} 
-          text="Piilota sisältö epäaktiivisista radio-painikkeista" 
+          text="Hide inactive radio button content" 
         />
         <Toggle 
           id="showTile" 
           state={showBorder} 
           setState={setShowBorder} 
-          text="Näytä ääriviiva radio-painikkeiden ympärillä" 
+          text="Add radio button border" 
         />
         <Toggle 
           id="showActiveBorder" 
           state={hideInactiveBorder} 
           setState={setHideInactiveBorder} 
-          text="Piilota ääriviiva epäaktiivisista radio-painikkeista"
+          text="Hide inactive radio button border"
           disabled={!showBorder && true}
         />
       </div>

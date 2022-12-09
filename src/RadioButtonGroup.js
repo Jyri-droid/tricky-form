@@ -23,12 +23,12 @@ const RadioButtonGroup = (props) => {
             defaultChecked
             onClick={handleRadioClick}
           />
-          Merkitse enimmäismäärä osakkeita
+          Subscribe maximum account of stock
           <br />
         </label>
         {(!props.hideInactive || (props.hideInactive && props.radio === "all")) && (<p>
-          Enimmäismäärä on {props.maxStock} kpl. <br />
-          Merkinnän jälkeen sinulla jää käyttämättä 0 merkintäoikeutta.
+          Maximum amount of stock is {props.maxStock}. <br />
+          After the subscription you will have 0 subscription rights left.
         </p>)}
       </div>
 
@@ -45,7 +45,7 @@ const RadioButtonGroup = (props) => {
             value="custom"
             onClick={handleRadioClick}
           />
-          Syötä merkittävien osakkeiden määrä
+          Enter amount of stock
           <br />
         </label>
         {(!props.hideInactive || (props.hideInactive && props.radio === "custom")) &&  (<><Input
@@ -56,10 +56,10 @@ const RadioButtonGroup = (props) => {
           radio={props.radio}
         />
         <p>
-          Syötä määrä, joka on jaollinen luvulla {props.ratio[1]}. <br />
-          Merkinnän jälkeen sinulla jää käyttämättä{" "}
+          Enter amount that is dividable by {props.ratio[1]}. <br />
+          After the subscription you will have{" "}
           {(props.ratio[0] / props.ratio[1]) * (props.maxStock - props.input) + " "}
-          merkintäoikeutta.
+          subscription right left.
         </p></>)}
       </div>
     </fieldset>
