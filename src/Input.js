@@ -4,13 +4,13 @@ const Input = (props) => {
   const [alert, setAlert] = useState(null);
   const handleInputChange = (event) => {
     if (event.target.value > props.maxStock) {
-      setAlert("Enimmäismäärä on 100");
+      setAlert("You have exceeded maximum amount");
       props.setInput(props.maxStock);
     } else if (event.target.value <= 0) {
-      setAlert("Vähimmäismäärä on 1");
+      setAlert(`Minimum amount is ${props.ratio}`);
       props.setInput(0);
     } else if (Math.round(event.target.value / props.ratio) !== event.target.value / 5) {
-      setAlert(`Määrän pitää olla jaollinen luvulla ${props.ratio}`);
+      setAlert(`The amount must be dividable by ${props.ratio}`);
       props.setInput(0);
     } else {
       setAlert(false);
